@@ -1,4 +1,5 @@
 var express = require("express");
+var path = require("path");
 
 var app = express();
 
@@ -9,9 +10,6 @@ app.use(express.json());
 
 require("./Develop/routes/apiRoutes");
 
-app.get("/", function (req,res){
-    
-})
 
 app.listen(PORT, function (){
     console.log ("App listening on: localhost:" + PORT )
