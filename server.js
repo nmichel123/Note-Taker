@@ -7,8 +7,12 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-require("./Develop/routes/apiRoutes")
+require("./Develop/routes/apiRoutes");
+
+app.get("/", function (req,res){
+    
+})
 
 app.listen(PORT, function (){
-    console.log ("App listening on: http://localhost:" + PORT )
+    console.log ("App listening on: localhost:" + PORT )
 });
