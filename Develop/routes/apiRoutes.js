@@ -5,7 +5,7 @@ var note = require("../db/db.json");
 module.exports = function (app) {
 
     app.get("/api/notes", function (req, res) {
-        fs.readFile("../db/db.json")
+        return fs.readFile("../db/db.json")
         res.json(note);
     }); 
 
