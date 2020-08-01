@@ -2,21 +2,25 @@ var fs = require("fs");
 var util = require("util");
 var note = require("../db/db.json");
 
+
 module.exports = function (app) {
 
+    
     app.get("/api/notes", function (req, res) {
-        return fs.readFile("../db/db.json")
-        res.json(note);
+        res.json(note)
+        return readFile("../db/db.json", "utf8")
+        
     }); 
 
     app.post("/api/notes", function (req, res) {
-        const userNote = {};
-        userNote.body = req.body.newNote
-        note.push(userNote);
-        res.redirect('/');
+       res.json(note)
+      
+
     });
 
-    app.post("/api/clear", function (req, res){
-        destroy(note).replace(/\s+/g, "").toLowerCase();
-    })
+    app.post("/api/clear/:id", function (req, res){
+        
+    
+
+    });
 };
