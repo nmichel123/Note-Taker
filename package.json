@@ -7,14 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Nico",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.16.4",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
-    "eslint": "^7.5.0",
     "util": "^0.12.3",
-    "body-parser": "^1.19.0"
+    "uuid": "^3.4.0"
   }
 }

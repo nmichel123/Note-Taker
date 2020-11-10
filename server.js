@@ -1,17 +1,17 @@
-var express = require("express");
+const express = require("express");
+const apiRoutes = require("./routes/apiRoutes")
+const htmlRoutes = require("./routes/htmlRoutes")
 
-var app = express();
+// Initialize app and create a port
+const app = express();
+const PORT = process.env.PORT || 3030;
 
-var PORT = process.env.PORT || 8080;
-
-app.use(express.urlencoded({ extended: true}));
+// Set up body parsing, static and route the middleware
 app.use(express.json());
-app.use(express.static("./Develop/public/assets"));
+app.use(express.urlencoded({ extended: true}));
+app.use(express.static("public"))
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
 
-require("./Develop/routes/apiRoutes")(app);
-require("./Develop/routes/htmlRoutes")(app);
-
-
-app.listen(PORT, function (){
-    console.log ("🌎 App listening on: localhost:" + PORT )
-});
+// Starts server on port 3030
+app.listen(PORT, () => console.log(` 🌎 => Listening on PORT: ${PORT}`));
