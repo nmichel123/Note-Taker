@@ -4,6 +4,6 @@ This is a note taking application that saves notes on an express server. The use
 
 Technologies used: HTML, CSS, Javascript, NodeJS, Express
 
-Link to deployed site: https://git.heroku.com/calm-citadel-96049.git
+Link to deployed site: https://calm-citadel-96049.herokuapp.com/
 
 ![NoteTaker](public/assets/img/notetaker.png)
